@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=61.0.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "git-review"
+version = "0.1.0"
+description = "A local-first pre-submission PR reviewer using Ollama"
+readme = "README.md"
+authors = [
+    { name = "Luke Melendy", email = "lukemelendy4@gmail.com" }
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+requires-python = ">=3.8"
+
+# This section automatically maps the terminal command to your Python function
+[project.scripts]
+git-review = "git_review.review:main"
